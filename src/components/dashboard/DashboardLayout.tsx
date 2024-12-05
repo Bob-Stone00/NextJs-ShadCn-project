@@ -1,24 +1,29 @@
-import React, { ReactNode } from "react";
+"use client";
+
+import React, { ReactNode, useState } from "react";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
-import Dashboard from "./Dashboard";
 
 interface DashboardLayoutProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => setSidebarOpen((prev) => !prev);
+
   return (
     <div className="flex">
-      <div className="sticky top-0  h-full overflow-y-auto">
-        <Sidebar />
+      <div className="sticky top-0 h-screen">
+        <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       </div>
 
       <div className="flex-1">
-        <Topbar />
-        <main className=" ">
-          <Dashboard />
-        </main>
+        <div className="sticky top-0 z-50">
+          <Topbar toggleSidebar={toggleSidebar} />
+        </div>
+        <main>{children}</main>
       </div>
     </div>
   );

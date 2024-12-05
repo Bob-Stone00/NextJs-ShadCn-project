@@ -31,7 +31,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function LineChartt() {
+export function VisitorInsights() {
   return (
     <Card className="py-[20px] ">
       <CardHeader>

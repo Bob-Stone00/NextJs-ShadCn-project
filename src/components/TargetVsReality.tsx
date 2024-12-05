@@ -36,7 +36,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function BarChartt2() {
+export function TargetVsReality() {
   return (
     <Card className="h-[410px]">
       <CardHeader>

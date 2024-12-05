@@ -37,7 +37,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function BarChartt() {
+export function TodaysSales() {
   return (
     <Card className="h-[410px] ">
       <CardHeader>

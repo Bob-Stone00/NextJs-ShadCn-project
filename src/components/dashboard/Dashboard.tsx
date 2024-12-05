@@ -1,8 +1,8 @@
 import React from "react";
-import { LineChartt } from "../LineChartt";
-import { BarChartt } from "../BarChartt";
-import { BarChartt2 } from "../BarChartt2";
-import { AreaChartt } from "../AreaChartt";
+import { VisitorInsights } from "../VisitorInsights";
+import { TodaysSales } from "../TodaysSales";
+import { TargetVsReality } from "../TargetVsReality";
+import { CustomerSatisfaction } from "../CustomerSatisfaction";
 import TopProducts from "../TopProducts";
 import { VolumeService } from "../VolumeService";
 import Image from "next/image";
@@ -84,19 +84,19 @@ const DashboardOutline: React.FC = () => {
       </div>
 
       <div className="col-span-1 md:col-span-4 ">
-        <LineChartt />
+        <VisitorInsights />
       </div>
 
       <div className="col-span-1 md:col-span-4  ">
-        <BarChartt />
+        <TodaysSales />
       </div>
 
       <div className="col-span-1 md:col-span-4  ">
-        <AreaChartt />
+        <CustomerSatisfaction />
       </div>
 
       <div className="col-span-1 md:col-span-4 ">
-        <BarChartt2 />
+        <TargetVsReality />
       </div>
 
       <div className="col-span-1 md:col-span-5 ">

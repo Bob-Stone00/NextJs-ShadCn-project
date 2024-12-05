@@ -37,7 +37,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function AreaChartt() {
+export function CustomerSatisfaction() {
   return (
     <Card className="h-[410px] ">
       {" "}
